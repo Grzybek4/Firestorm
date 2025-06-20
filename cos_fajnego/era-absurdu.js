@@ -93,13 +93,13 @@ const layoutContainer = document.getElementById('layoutContainer');
   const containerHeight = window.innerHeight;
   const placedRects = [];
 
-  layoutContainer.innerHTML = '';
+  layoutContainer.innerHTML = ''; // wyczyść layout
   shuffle(sections);
 
   sections.forEach(section => {
-    layoutContainer.appendChild(section)
+    layoutContainer.appendChild(section); // musimy dodać do DOM by znać wymiary
     section.style.position = 'absolute';
-    section.style.transform = 'none';
+    section.style.transform = 'none'; // zresetuj obrót na czas obliczeń
 
     const width = section.offsetWidth;
     const height = section.offsetHeight;
@@ -125,7 +125,7 @@ const layoutContainer = document.getElementById('layoutContainer');
       tries++;
     }
 
-    const rotation = (Math.random() * 20 - 10).toFixed(2);
+    const rotation = (Math.random() * 20 - 10).toFixed(2); // -10° do 10°
 
     section.style.left = `${left}px`;
     section.style.top = `${top}px`;

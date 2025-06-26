@@ -1,0 +1,339 @@
+@font-face {
+  font-family: 'PressStart2P';
+  src: url('PressStart2P-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'VT323';
+  src: url('VT323-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Workbench';
+  src: url('Workbench-Regular-VariableFont_BLED,SCAN.ttf') format('truetype');
+}
+
+
+* {
+  font-family: 'VT323', monospace;
+  font-size: 100%;
+  text-align: center;
+  color: white;
+  background: none;
+  display: block;
+}
+
+
+.gradient-text {
+    text-align: center;
+  background: linear-gradient(steelblue, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.gradient-text2 {
+    text-align: center;
+  background: linear-gradient(white, gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+
+h1 {
+  font-family: 'PressStart2P', monospace;
+}
+
+body {
+  background-image: linear-gradient(black, #1a263d, black);
+  margin: 0;
+  padding: 0;
+}
+#index{
+  height: 100vh;
+}
+header{
+    width: 100%;
+    height: 10%;
+    background-image: linear-gradient(#1a263d, black);
+    padding: 2vh;
+}
+.infotable1{
+    width: 16.66%;
+    height: 50%;
+    float: left;
+}
+.infotable2{
+    width: 25%;
+    height: 30%;
+    float: left;
+}
+footer{
+    width: 100%;
+    height: 10%;
+    clear: both;
+    background-image: linear-gradient(black, #1a263d);
+    padding: 2vh;
+}
+main{
+    height: 100%;
+}
+.emoji-section {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.emoji-section::before {
+  content: attr(data-emoji);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  font-size: 20rem;
+  opacity: 0.3;
+  filter: blur(1px) brightness(0.8);
+  pointer-events: none;
+  z-index: 0;
+  transition: all 0.4s ease;
+  mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.5));
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.5));
+}
+.emoji-section:hover::before {
+  bottom: 20%;
+  transform: translateX(-50%) scale(1.2);
+  opacity: 0.4;
+}
+.emoji-section:hover::after {
+  bottom: 0%;
+  transform: translateX(-50%) scale(2.2);
+}
+.historia::after {
+  content: "📜";
+}
+.planets::after {
+  content: "🪐";
+}
+.military::after {
+  content: "⚔️";
+}
+.factions::after {
+  content: "🚩";
+}
+.aliens::after {
+  content: "👽";
+}
+.abstract::after {
+  content: "⭐";
+}
+.section-btn {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-family: 'PressStart2P', monospace;
+  font-size: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  z-index: 2;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.section-btn:hover {
+  background-color: steelblue;
+  transform: scale(1.1);
+}
+
+.infotable3{
+  width: 100%;
+  font-size: larger;
+}
+.infotable4{
+  border: 5px dashed white;
+  font-size: medium;
+}
+.infotable4_2{
+  display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(25vw, 0.1vw)); 
+}
+
+.large-text{
+  font-size: xx-large;
+}
+.monotext {
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+a {
+  display: inline-block;
+  white-space: nowrap;
+  width: auto;
+  height: auto;
+}
+.infotable5{
+  border: 2px dashed white;
+  text-align: center;
+  width: 25vw;
+}
+h3{
+  font-size: 125%;
+  letter-spacing: 0.1vw;
+}
+
+.infotable5 img:hover{
+  transform: scale(1.2);
+
+}
+.infotable5 > h3{
+  font-family: 'sans-serif';
+}
+img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+h2 >img{
+  transform: scale(2);
+}
+#map_background {
+  background-image: url('MAPA_KOSMOSU2.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 160vh;
+  image-rendering: pixelated;
+  position: relative;
+  background-color: black;
+}
+#map_background_sun {
+  background-image: url('solar_system_orbits.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 160vh;
+  image-rendering: pixelated;
+  position: relative;
+  background-color: black;
+}
+
+/* Koordynaty 0,0 : 47vw, 73.625vh */
+/* odejmując od left przesuwamy w pewo, odejmując od to przesuwamy w górę */
+/* niektóre gwiazdy (słońce i alfa centauri) się buggują ze względu na to, że aby zachować mniej więcej równy dystans i mniej więcej skalę, obszar <img> nachodzi na inne.
+Przesunałem alfa centauri trochę do góry ale nadal są problemy, a nie chcę robić mapy zbyt dużej */
+#sol-sys {
+  left: 47vw; 
+  top: 73.625vh;
+  width: 5vw;
+  height: 5vh;
+}
+#sol {
+  left: 38.8vw; 
+  top: 65vh;
+  width: 20vw;
+  height: 20vh;
+}
+#mercury{
+  width: 1.5vw;
+  height: 1.5vh;
+  left: 36vw; 
+  top: 69.1vh;
+}
+#venus{
+  width: 5vw;
+  height: 5vh;
+  left: 37vw; 
+  top: 97vh;
+}
+#mars{
+  width: 4vw;
+  height: 4vh;
+  left: 71.5vw; 
+  top: 97vh;
+}
+#deimos{
+  width: 1vw;
+  height: 1vh;
+  left: 71.5vw; 
+  top: 97vh;
+}
+#jowisz{
+  left: 70vw; 
+  top: 43vh;
+  width: 15vw;
+  height: 15vh;
+}
+#alfa-sys{
+  width: 6.15vw;
+  height: 6.15vh;
+  left: 49vw; 
+  top: 66vh;
+}
+#tau-sys{
+  left: 39.75vw; 
+  top: 61vh;
+  width: 3.95vw;
+  height: 3.95vh;
+}
+#trap-sys{
+  left: 25.2vw; 
+  top: 34.5vh;
+  width: 0.6vw;
+  height: 0.6vh;
+}
+#ross-sys{
+  left: 57.3vw; 
+  top: 76.5vh;
+  width: 1vw;
+  height: 1vh;
+}
+#bar-sys{
+  left: 42.6vw; 
+  top: 84.9vh;
+  width: 0.95vw;
+  height: 0.95vh;
+}
+#ez-sys{
+  left: 57.3vw; 
+  top: 89.5vh;
+  width: 0.75vw;
+  height: 0.75vh;
+}
+#tee-sys{
+  left: 56.4vw; 
+  top: 61.7vh;
+  width: 0.55vw;
+  height: 0.55vh;
+}
+#lee-sys{
+  left: 45.7vw; 
+  top: 95.5vh;
+  width: 1.75vw;
+  height: 1.75vh;
+}
+.map{
+  position: absolute;
+  width: 5vw;
+  height: 5vh;
+  z-index: 5;
+}
+.map img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.map img:hover {
+  transform: scale(1.4);
+}
+.infotable6{
+  display: flex;
+  flex-direction: row;
+}
+table{
+  display: inline;
+}

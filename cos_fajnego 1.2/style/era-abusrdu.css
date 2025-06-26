@@ -1,0 +1,41 @@
+body {
+    background: radial-gradient(circle, #ff00ff 0%, #00ffff 100%);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.chaotic-text {
+    font-size: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.chaotic-char {
+    transition: all 0.3s ease;
+    padding: 0 2px;
+    font-size: 20%;
+}
+
+#layoutContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#layoutContainer > * {
+  position: absolute;
+  background: #ffffffcc;
+  padding: 20px;
+  width: 250px;
+  max-width: 90vw;
+  border: 2px dashed #888;
+  transition: transform 0.5s ease, top 0.5s ease, left 0.5s ease;
+  box-sizing: border-box;
+}

@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'PressStart2P';
+  src: url('../czcionki/PressStart2P-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'VT323';
+  src: url('../czcionki/VT323-Regular.ttf') format('truetype');
+}
+*{
+    margin: auto;
+    font-family: 'PressStart2P';
+    color: #C5C6C7;
+}
+body{
+    background-color: #19180A;
+    color: white;
+    min-height: 100vh;
+}
+header{
+    width: 100vw;
+    height: 10vh;
+    text-align: left;
+    background-color: #1F2833;
+    z-index: 1;
+}
+main{
+    width: 100vw;
+}
+nav{
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #2F3339;
+}
+footer{
+    width: 100vw;
+    height: 15vh;
+    color: #8B3A3A;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    background-color: #1F2833;
+    z-index: 2;
+}
+.przerwa{
+    width: 100vw;
+    height: 10vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #2F3339;
+}
+.podsekcja_kontener{
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    background-image: linear-gradient(#151A22, #2F3339);
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+.podsekcja{
+    width: 30vw;
+    height: 85vh;
+    padding: 1vw;
+    background-color: #1F2833;
+}
+.tytul_podsekcji{
+    width: 30vw;
+    height: 15vh;
+    text-align: center;
+    background-color: #151A22;
+    background-image: linear-gradient(#151a22, #1F2833);
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tresc_podsekcji, .tresc_podsekcji > p{
+    width: 30vw;
+    height: 45vh;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-family: sans-serif;
+}
+.zdjecie_podsekcji{
+    width: 30vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(#1F2833, #151a22);
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+}
+.zdjecie_podsekcji > img{
+    height: 25vh;
+}
+a{
+    color: #8B3A3A;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'VT323';
+    font-size: 5vh;
+}
+
+.nav_section{
+    background-image: linear-gradient(#19180A, #1F2833, #151A22);
+    border: 0.125vh solid #231651;
+    width: 16vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.definition_section{
+    width: 100%;
+    margin: 5px;
+    min-height: 40vh;
+    background-image: radial-gradient(#231651, #19180A);
+}
+.definition_text{
+    width: 50%;
+    float: left;
+}
+.definition_inner > p{
+    font-family: sans-serif;
+    font-size: 150%;
+}
+.footer_link > a{
+    color: #B3001B;
+    text-decoration: underline;
+    float: right;
+    display: flex;
+    align-items: center;
+}
+.footer_link{
+    font-family: 'VT323';
+    font-size: 3vh;
+}
+
+.infotable2 > p{
+    font-family: sans-serif;
+}
+.infotable2{
+    min-height: 40vh;
+    padding-top: 0.5vh;
+    width: 49vw;
+    padding: 5%;
+    padding-left: 5vw;
+    text-align: center;
+    background-color: #19180A;
+    
+}
+.infotable2_container{
+    width: 100vw;
+}
+
+.infotable2 > p{
+    width: 50vw;
+}
+.infotable2_header{
+    padding-top: 0.5vh;
+    padding-bottom: 2.5vh;
+    text-align: center;
+    background-image: linear-gradient(#1F2833, #19180A);
+}
+.infotable2 > img{
+    float: right;
+    opacity: 20%;
+    width: 35vw;
+    position: absolute;
+    transition-duration: 1s;
+    transform-origin: center center;
+    z-index: 0;
+    -webkit-mask-image: linear-gradient(to right, transparent, black);
+}
+.infotable2l > img:hover, .infotable2r > img:hover{
+    opacity: 80%;
+    scale: 1.4;
+    -webkit-mask-image: linear-gradient(to right, transparent, black);
+}
+.infotable3 > h1{
+    margin-top: 2%;
+    font-size: 5vh;
+    text-align: center;
+    margin-bottom: 1vh;
+    height: 5vh;
+    width: 100vw;
+}
+h4{
+    font-size: 2.5vh;
+    text-align: center;
+    margin-bottom: 2%;
+    margin-top: 1vh;
+    width: 100vw;
+}
+.infotable3 > p{
+    font-family: sans-serif;
+    width: 50vw;
+}
+.infotable3 > a{
+    font-family: sans-serif;
+}
+.infotable3{
+    margin-right: 2vw;
+    min-height: 80vh;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
